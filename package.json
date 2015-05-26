@@ -1,0 +1,32 @@
+{
+  "name": "pouch-browser",
+  "version": "0.0.0",
+  "description": "Look at docs with relationships in pouchdb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -d -t reactify example/example.js > example/bundle.js",
+    "watch": "watchify -t reactify example/example.js -o example/bundle.js -dv",
+    "server": "node server.js",
+    "dev": "npm run watch & npm run server",
+    "demo": "browserify example/example.js > example/bundle.js && html-inline example/index.html | curl -sT- https://htmlb.in | pbcopy && echo \"Don't forget to paste the demo URL into the readme.\""
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/pouch-browser.git"
+  },
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "ecstatic": "^0.7.6",
+    "little-pouch-db": "^1.0.2",
+    "pouchdb": "^3.5.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1"
+  },
+  "dependencies": {
+    "react-fancy-field": "file:../react-fancy-field",
+    "react-treeview": "https://github.com/nichoth/react-treeview/tarball/master"
+  }
+}
