@@ -26,7 +26,7 @@
     "reactify": "^1.1.1"
   },
   "dependencies": {
-    "react-fancy-field": "file:../react-fancy-field",
+    "react-fancy-field": "https://github.com/nichoth/react-fancy-field/tarball/master",
     "react-treeview": "https://github.com/nichoth/react-treeview/tarball/master"
   }
 }
