@@ -1,6 +1,6 @@
 var React = require('react/addons');
 
-module.exports = React.createClass({
+var ValueItem = React.createClass({
   propTypes: {
     value: React.PropTypes.object.isRequired,
     onSelect: React.PropTypes.func,
@@ -34,3 +34,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+module.exports = ValueItem;

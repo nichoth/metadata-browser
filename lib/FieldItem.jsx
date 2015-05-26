@@ -4,7 +4,7 @@ var React = require('react'),
     FancyTextField = require('react-fancy-field');
 
 
-module.exports = React.createClass({
+var FieldItem = React.createClass({
   propTypes: {
     field: React.PropTypes.object.isRequired,
     onSelect: React.PropTypes.func,
@@ -27,11 +27,10 @@ module.exports = React.createClass({
 
   // Expand/collapse this field on click.
   handleClick: function() {
-    this.setState({collapsed: !this.state.collapsed});
+    // this.setState({collapsed: !this.state.collapsed});
   },
 
   render: function() {
-    console.log(this.props);
     var name = this.props.field.name;
 
     var fancyText = (
@@ -70,3 +69,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+module.exports = FieldItem;

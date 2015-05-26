@@ -16,15 +16,19 @@ var Browser = React.createClass({
   },
 
   render: function() {
+    var style = {
+      listStyle: 'none'
+    };
+
     return (
-      <ul>
+      <ul style={style}>
       {this.props.fields.map(function(field, i) {
         return (
-          <FieldItem
-            key={i}
-            field={field}
-            onSelect={this.handlePairSelect}
-          />
+            <FieldItem
+              key={i}
+              field={field}
+              onSelect={this.handlePairSelect}
+            />
         );
       }, this)}
       </ul>
