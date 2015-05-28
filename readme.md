@@ -1,3 +1,5 @@
 # metadata browser
 
-Look at data structured as fields and values
+Look at key-value data
+
+    $ npm install https://github.com/nichoth/metadata-browser/tarball/master
